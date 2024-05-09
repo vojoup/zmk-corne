@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -22,7 +23,7 @@
 &none  &kp Q  &kp W           &kp E           &kp R               &kp T               &kp Y              &kp U        &kp I            &kp O            &kp P     &none
 &none  &kp A  &mt LEFT_GUI S  &mt LEFT_ALT D  &mt LEFT_CONTROL F  &mt LEFT_SHIFT G    &mt RIGHT_SHIFT H  &mt RCTRL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &kp SEMI  &none
 &none  &kp Z  &kp X           &kp C           &kp V               &kp B               &kp N              &kp M        &kp COMMA        &kp DOT          &kp FSLH  &none
-                              &sl 3           &lt 1 SPACE         &lt 2 TAB           &sk RIGHT_SHIFT    &lt 2 ENTER  &kp K_BACK
+                              &sl 3           &lt 1 SPACE         &lt 2 TAB           &sk RIGHT_SHIFT    &lt 2 ENTER  &kp BACKSPACE
             >;
         };
 
@@ -55,10 +56,10 @@
 
         adjust-layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans         &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &bootloader    &bootloader  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans         &trans       &trans  &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none          &soft_off    &none  &none  &none  &none  &none
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &none          &none        &none  &none  &none  &none  &none
+&none          &none          &none          &none          &none          &bootloader    &bootloader  &none  &none  &none  &none  &none
+                                             &none          &none          &none          &none        &none  &none
             >;
         };
     };
