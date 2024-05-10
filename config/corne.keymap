@@ -21,6 +21,17 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        sticky-adjust-layer {
+            bindings = <&sl 4>;
+            key-positions = <10 1>;
+            layers = <0>;
+            require-prior-idle-ms = <500>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -35,7 +46,7 @@
 &none  &kp Q  &kp W                         &kp E                         &kp R                      &kp T                             &kp Y                            &kp U                      &kp I                          &kp O                          &kp P     &none
 &none  &kp A  &balanced_mod_tap LEFT_GUI S  &balanced_mod_tap LEFT_ALT D  &balanced_mod_tap LCTRL F  &balanced_mod_tap LEFT_SHIFT G    &balanced_mod_tap RIGHT_SHIFT H  &balanced_mod_tap RCTRL J  &balanced_mod_tap RIGHT_ALT K  &balanced_mod_tap RIGHT_GUI L  &kp SEMI  &none
 &none  &kp Z  &kp X                         &kp C                         &kp V                      &kp B                             &kp N                            &kp M                      &kp COMMA                      &kp DOT                        &kp FSLH  &none
-                                            &sl 3                         &lt 1 SPACE                &lt 2 TAB                         &sk RIGHT_SHIFT                  &lt 2 ENTER                &kp BACKSPACE
+                                            &none                         &lt 1 SPACE                &lt 2 TAB                         &sk RIGHT_SHIFT                  &lt 2 ENTER                &kp BACKSPACE
             >;
         };
 
@@ -53,7 +64,7 @@
 &none  &none  &none  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT))  &none    &kp PAGE_UP         &kp PAGE_DOWN  &kp HOME      &kp END    &none  &none
 &none  &none  &none  &kp LS(LA(LEFT_ARROW))  &kp LS(LA(RIGHT))  &none    &kp LEFT_ARROW      &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none  &none
 &none  &none  &none  &none                   &none              &none    &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &none         &none      &none  &none
-                     &mo 4                   &none              &none    &kp ESCAPE          &none          &none
+                     &none                   &none              &none    &kp ESCAPE          &none          &none
             >;
         };
 
