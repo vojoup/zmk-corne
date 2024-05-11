@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&soft_off { hold-time-ms = <0>; };
+
 / {
     behaviors {
         balanced_mod_tap: balanced_mod_tap {
@@ -29,6 +31,11 @@
             key-positions = <10 1>;
             layers = <0>;
             require-prior-idle-ms = <200>;
+        };
+
+        soft_off {
+            bindings = <&soft_off>;
+            key-positions = <5 6>;
         };
     };
 
