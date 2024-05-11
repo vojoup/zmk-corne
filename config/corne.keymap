@@ -45,6 +45,31 @@
 
             tapping-term-ms = <150>;
         };
+
+        open_brackets: open_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OPEN_BRACKETS";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings =
+                <&kp LEFT_BRACKET>,
+                <&kp LEFT_BRACE>,
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LESS_THAN>;
+        };
+
+        close_brackets: close_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CLOSE_BRACKETS";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_BRACKET>,
+                <&kp RIGHT_PARENTHESIS>,
+                <&kp RIGHT_BRACE>,
+                <&kp GREATER_THAN>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -86,7 +111,7 @@
 &none  &none  &kp PERCENT  &kp PLUS   &kp DOUBLE_QUOTES  &kp EXCLAMATION    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &none         &none
 &none  &none  &kp AT_SIGN  &kp EQUAL  &kp SINGLE_QUOTE   &kp AMPERSAND      &kp LESS_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp COLON     &none
 &none  &none  &kp HASH     &kp MINUS  &kp GRAVE          &kp PIPE           &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE         &kp QUESTION  &none
-                           &none      &none              &none              &kp CARET       &kp DOLLAR            &none
+                           &none      &open_brackets     &close_brackets    &kp CARET       &kp DOLLAR            &none
             >;
         };
 
