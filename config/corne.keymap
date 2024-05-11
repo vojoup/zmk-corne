@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&soft_off { hold-time-ms = <0>; };
-
 / {
     behaviors {
         balanced_mod_tap: balanced_mod_tap {
@@ -45,7 +43,7 @@
                 <&kp LA(BACKSPACE)>,
                 <&kp LG(BACKSPACE)>;
 
-            tapping-term-ms = <70>;
+            tapping-term-ms = <150>;
         };
     };
 
