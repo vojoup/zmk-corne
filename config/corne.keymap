@@ -51,22 +51,14 @@
             label = "OPEN_BRACKETS";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings =
-                <&kp LEFT_BRACKET>,
-                <&kp LEFT_BRACE>,
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LESS_THAN>;
+            bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
         };
 
         close_brackets: close_brackets {
             compatible = "zmk,behavior-tap-dance";
             label = "CLOSE_BRACKETS";
             #binding-cells = <0>;
-            bindings =
-                <&kp RIGHT_BRACKET>,
-                <&kp RIGHT_PARENTHESIS>,
-                <&kp RIGHT_BRACE>,
-                <&kp GREATER_THAN>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
 
             tapping-term-ms = <150>;
         };
