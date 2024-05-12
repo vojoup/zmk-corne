@@ -42,15 +42,12 @@
                 <&kp BACKSPACE>,
                 <&kp LA(BACKSPACE)>,
                 <&kp LG(BACKSPACE)>;
-
-            tapping-term-ms = <150>;
         };
 
         open_brackets: open_brackets {
             compatible = "zmk,behavior-tap-dance";
             label = "OPEN_BRACKETS";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
             bindings = <&kp LEFT_BRACKET>, <&kp LESS_THAN>;
         };
 
@@ -59,8 +56,6 @@
             label = "CLOSE_BRACKETS";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp GREATER_THAN>;
-
-            tapping-term-ms = <150>;
         };
     };
 
