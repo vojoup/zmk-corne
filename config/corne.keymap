@@ -101,9 +101,9 @@
 
         symbols_layer {
             bindings = <
-&none  &none  &kp PERCENT  &kp PLUS   &kp DOUBLE_QUOTES  &kp EXCLAMATION    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &none         &none
+&none  &none  &kp PERCENT  &kp PLUS   &kp DOUBLE_QUOTES  &kp EXCLAMATION    &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp TILDE     &none
 &none  &none  &kp AT_SIGN  &kp EQUAL  &kp SINGLE_QUOTE   &kp AMPERSAND      &kp LESS_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GREATER_THAN  &kp COLON     &none
-&none  &none  &kp HASH     &kp MINUS  &kp GRAVE          &kp PIPE           &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE         &kp QUESTION  &none
+&none  &none  &kp HASH     &kp MINUS  &kp GRAVE          &kp PIPE           &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH     &kp QUESTION  &none
                            &none      &open_brackets     &close_brackets    &kp CARET       &kp DOLLAR            &none
             >;
         };
