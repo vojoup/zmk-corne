@@ -79,11 +79,6 @@
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
-
-        soft_off {
-            bindings = <&soft_off>;
-            key-positions = <5 6>;
-        };
     };
 
     keymap {
