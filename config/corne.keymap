@@ -79,6 +79,11 @@
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
+
+        hyper_key {
+            bindings = <&sk LS(LA(LC(LEFT_GUI)))>;
+            key-positions = <4 3>;
+        };
     };
 
     keymap {
