@@ -85,6 +85,12 @@
             bindings = <&sk LS(LA(LC(LEFT_GUI)))>;
             key-positions = <4 3>;
         };
+
+        cond-mouse-layer {
+            bindings = <&mo 5>;
+            key-positions = <12 38>;
+            layers = <0>;
+        };
     };
 
     keymap {
