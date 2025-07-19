@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -140,23 +139,7 @@
                                       &none          &none          &none          &none  &none  &none
             >;
         };
-
-        mouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &mkp MB1        &mkp MCLK     &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans          &trans          &trans
-            >;
-        };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        cond_mouse_layer {
-            if-layers = <1 0>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
