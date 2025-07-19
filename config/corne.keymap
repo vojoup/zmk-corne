@@ -88,8 +88,7 @@
 
         cond-mouse-layer {
             bindings = <&mo 5>;
-            key-positions = <12 38>;
-            layers = <0>;
+            key-positions = <0 1>;
         };
     };
 
