@@ -75,6 +75,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
+
+        num_word: num_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "NUM_WORD";
+            #binding-cells = <0>;
+            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0>;
+        };
+
+        tap_num_word: tap_num_word {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_WORD";
+            #binding-cells = <0>;
+            bindings = <&sl 3>, <&num_word>;
+        };
     };
 
     combos {
@@ -112,7 +126,7 @@
 &none  &kp Q                           &kp W                         &kp E                         &kp R                      &kp T                             &kp Y                            &kp U                      &kp I                          &kp O                          &kp P     &none
 &none  &balanced_mod_tap LEFT_SHIFT A  &balanced_mod_tap LEFT_GUI S  &balanced_mod_tap LEFT_ALT D  &balanced_mod_tap LCTRL F  &balanced_mod_tap LEFT_SHIFT G    &balanced_mod_tap RIGHT_SHIFT H  &balanced_mod_tap RCTRL J  &balanced_mod_tap RIGHT_ALT K  &balanced_mod_tap RIGHT_GUI L  &kp SEMI  &none
 &none  &kp Z                           &kp X                         &balanced_mod_tap LG(C) C     &release_mod_tap LG(V) V   &kp B                             &kp N                            &kp M                      &kp COMMA                      &dot_key_repeat_tap_dance      &kp FSLH  &none
-                                                                     &sl 3                         &lt 1 SPACE                &lt 2 TAB                         &shift_sym_layer_tap_dance       &lt 2 ENTER                &hyper_delete
+                                                                     &tap_num_word                 &lt 1 SPACE                &lt 2 TAB                         &shift_sym_layer_tap_dance       &lt 2 ENTER                &hyper_delete
             >;
         };
 
