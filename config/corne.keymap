@@ -76,18 +76,11 @@
             bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
 
-        num_word: num_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
-            #binding-cells = <0>;
-            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0>;
-        };
-
         tap_num_word: tap_num_word {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_NUM_WORD";
             #binding-cells = <0>;
-            bindings = <&sl 3>, <&num_word>;
+            bindings = <&sl 3>, <&caps_word>;
         };
     };
 
@@ -150,10 +143,10 @@
 
         numbers_layer {
             bindings = <
-&none  &none  &none  &none  &none      &none              &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
-&none  &none  &none  &none  &none      &none              &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
-&none  &none  &none  &none  &none      &none              &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
-                     &none  &kp SPACE  &kp KP_NUMBER_0    &kp KP_NUMBER_0  &none            &none
+&none  &none  &none  &none  &none  &none              &kp PLUS         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
+&none  &none  &none  &none  &none  &none              &kp MINUS        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
+&none  &none  &none  &none  &none  &none              &kp EQUAL        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
+                     &none  &none  &kp KP_NUMBER_0    &kp KP_NUMBER_0  &none            &none
             >;
         };
 
