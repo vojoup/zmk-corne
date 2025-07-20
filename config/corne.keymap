@@ -68,6 +68,13 @@
             hold-trigger-on-release;
             tapping-term-ms = <200>;
         };
+
+        brace_tap_dance: brace_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACE_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
     };
 
     combos {
@@ -86,7 +93,7 @@
         };
 
         braces {
-            bindings = <&release_mod_tap RIGHT_BRACE LEFT_BRACE>;
+            bindings = <&brace_tap_dance>;
             key-positions = <19 20>;
         };
     };
