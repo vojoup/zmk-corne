@@ -86,7 +86,7 @@
         };
 
         braces {
-            bindings = <&balanced_mod_tap RIGHT_BRACE LEFT_BRACE>;
+            bindings = <&release_mod_tap RIGHT_BRACE LEFT_BRACE>;
             key-positions = <19 20>;
         };
     };
