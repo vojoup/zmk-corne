@@ -103,11 +103,6 @@
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
-
-        braces {
-            bindings = <&brace_tap_dance>;
-            key-positions = <19 20>;
-        };
     };
 
     keymap {
